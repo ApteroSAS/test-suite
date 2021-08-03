@@ -1,2 +1,3 @@
-cd nightwatch-docker-grid-master\bin
+cd nightwatch-docker\bin
 run_test.bat
+cd ..\..
