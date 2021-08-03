@@ -1,2 +1,3 @@
 docker build -t mocha-docker .
-docker run --rm mocha-docker mocha ""/project/src/loadero/**/*.test.js"
+rem set enfile with variable LOADERO_TOKEN
+docker run --env-file ./loadero.env --rm mocha-docker mocha ""/project/src/loadero/**/*.test.js"

@@ -8,7 +8,7 @@ const PROJECT_ID = 6735;
 // The ID of the test we want to run
 const TEST_ID = 9348;
 // The ID of the test we want to run
-const TOKEN = 9348;
+const TOKEN = process.env.LOADERO_TOKEN;
 
 //https://editor.swagger.io/ + https://api.loadero.com/v2/docs/
 
@@ -17,7 +17,7 @@ const getUrl = async url => {
     const OPTIONS = {
         headers: {
             Authorization:
-                "LoaderoAuth <WRITE YOUR TOKEN HERE>"
+                "LoaderoAuth "+TOKEN
         },
         method: "POST"
     };
