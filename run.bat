@@ -1,1 +1,2 @@
-pushd nightwatch-docker\bin && (run_test.bat & popd)
+pushd nightwatch-docker && (run_test.bat & popd)
+pushd mocha-docker && (run_test.bat & popd)
