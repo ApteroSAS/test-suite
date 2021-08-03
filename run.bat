@@ -1,3 +1,1 @@
-cd nightwatch-docker\bin
-run_test.bat
-cd ..\..
+pushd nightwatch-docker\bin && (run_test.bat & popd)
