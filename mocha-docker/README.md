@@ -1,3 +1,9 @@
+run_mocha-nightwatch.bat UX test with browser support
+run_mocha.bat integration testing
+run-mocha-loadero.bat load test (needs API keys to work and consumes money - use with caution)
+
+
+
 ## Important note:
 
 All the credit goes to [DigitallySeamless](https://github.com/DigitallySeamless). You can think of this repos as `copy/past/replace`
