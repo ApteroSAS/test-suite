@@ -1,0 +1,17 @@
+---
+version: '3.7'
+
+services:
+
+  mocha:
+    build:
+      context: .
+    command: mocha /project/src/simple-test/*.test.js --reporter mochawesome
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./results/simple-test/mochawesome-report/:/project/tests/src/mochawesome-report/
+
+
+      
+
+

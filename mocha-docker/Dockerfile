@@ -17,15 +17,17 @@ RUN pip3 install docker-compose
 # Install Bower & Grunt
 ##################
 RUN npm install -g mocha
+RUN npm install -g mochawesome
 
 # Define working directory.
 WORKDIR /project
-
-# Define default command.
-CMD mocha "/project/src/**/*.test.js"
 
 copy ./tests/package.json /project/package.json
 RUN npm i
 
 copy ./tests/ /project/
+
+# Define default command.
+WORKDIR /project/tests/src
+CMD mocha "**/*.test.js" --reporter mochawesome
 
