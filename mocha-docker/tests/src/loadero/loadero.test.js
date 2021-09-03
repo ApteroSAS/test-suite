@@ -13,7 +13,7 @@ console.log(TOKEN)
 
 //https://editor.swagger.io/ + https://api.loadero.com/v2/docs/
 
-const getUrl = async url => {
+const getUrl = async (url:any) => {
     // Request options with authorization header and access token
     const OPTIONS = {
         headers: {
@@ -32,7 +32,7 @@ const getUrl = async url => {
     return response.json();
 };
 
-const runTest = async (TEST_ID) => {
+const runTest = async (TEST_ID:any) => {
     // Run test
     return await getUrl(`${BASE_URL}/${PROJECT_ID}/tests/${TEST_ID}/runs/`)
 };

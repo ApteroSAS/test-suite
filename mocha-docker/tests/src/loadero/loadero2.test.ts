@@ -20,7 +20,7 @@ describe('loadero', () => {
     it('load test', async function() {
         this.timeout(0);//diable timeout for this testvar
         const apiInstance = new LoaderoController.ProjectrunApi();
-        apiInstance.readProjectRun(PROJECT_ID, RUN_ID, (error, data, response) => {
+        apiInstance.readProjectRun(PROJECT_ID, RUN_ID, (error:any, data:any, response:any) => {
             if (error) {
                 console.error(error);
             } else {
