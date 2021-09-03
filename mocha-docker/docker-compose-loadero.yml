@@ -6,7 +6,7 @@ services:
   mocha:
     build:
       context: .
-    command: mocha /project/src/loadero/*.test.js --reporter mochawesome
+    command: mocha /project/src/loadero/*.test.ts --reporter mochawesome
     env_file: ./loadero.env
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

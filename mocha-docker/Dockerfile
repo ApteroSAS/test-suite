@@ -16,8 +16,9 @@ RUN pip3 install docker-compose
 ##################
 # Install Bower & Grunt
 ##################
-RUN npm install -g mocha
-RUN npm install -g mochawesome
+RUN npm i -g mocha
+RUN npm i -g mochawesome
+RUN npm i -g ts-node
 
 # Define working directory.
 WORKDIR /project
