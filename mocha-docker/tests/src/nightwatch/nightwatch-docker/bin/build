@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# Builds the nightwatch docker image
-
-set -e
-
-./bin/stop
-
-docker-compose build --pull nightwatch

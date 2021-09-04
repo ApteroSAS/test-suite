@@ -1,3 +1,9 @@
 [submodule "mocha-docker/tests/src/loadero/lib/loadero_controller"]
 	path = mocha-docker/tests/src/loadero/lib/loadero_controller
 	url = https://github.com/ApteroSAS/loadero_controller.git
+[submodule "mocha-loadero-docker/lib/loadero_controller"]
+	path = mocha-loadero-docker/lib/loadero_controller
+	url = https://github.com/ApteroSAS/loadero_controller.git
+[submodule "mocha-loadero-docker/tests/src/loadero/lib/loadero_controller"]
+	path = mocha-loadero-docker/tests/src/loadero/lib/loadero_controller
+	url = https://github.com/ApteroSAS/loadero_controller.git
