@@ -3,8 +3,7 @@
 if [ "x$DEBUG" == "x" ] ; then
   pwd
   npm run nightwatch
-  #npm run nightwatch --reporter ./html-reporter.js
-  #nightwatch-html-reporter -d /tests/nightwatch/reports
+  nightwatch-html-reporter -d /home/docker/app/tests_output
 else
   npm run nightwatch-debug
 fi
