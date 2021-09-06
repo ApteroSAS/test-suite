@@ -68,12 +68,6 @@ services:
       - nightwatch-docker-grid-network
     logging: *LOG
 
-  web:
-    image: mycargus/hello_docker_world:master
-    networks:
-      - nightwatch-docker-grid-network
-    logging: *LOG
-
 networks:
   nightwatch-docker-grid-network:
     driver: bridge

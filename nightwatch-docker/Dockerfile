@@ -23,7 +23,6 @@ RUN npm ci --ignore-scripts --unsafe-perm --loglevel warn --no-progress || \
 # will force docker to rebuild the "npm install" layer above)
 COPY . ./
 
-RUN mkdir -p reports
 ENV NODE_ENV=test
 ENV TESTS_DIRECTORY=tests
 ENV PATH="${PATH}:${APP_DIR}/node_modules/nightwatch/bin"
