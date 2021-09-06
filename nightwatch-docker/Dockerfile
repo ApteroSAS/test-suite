@@ -7,6 +7,7 @@ ENV APP_DIR $HOME/docker/app
 RUN mkdir -p $APP_DIR
 RUN mkdir -p $APP_DIR/tests_output/screenshots
 
+RUN npm install -g nightwatch
 RUN npm install -g nightwatch-html-reporter
 
 WORKDIR $APP_DIR

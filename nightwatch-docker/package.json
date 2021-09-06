@@ -12,7 +12,9 @@
     "nightwatch-html-reporter": "^2.0.6"
   },
   "devDependencies": {
+    "chromedriver": "^93.0.1",
     "dockerfilelint": "^1.8.0",
+    "geckodriver": "^2.0.4",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
   },

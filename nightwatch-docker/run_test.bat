@@ -3,7 +3,7 @@ docker-compose kill && docker-compose rm -vf
 
 rem start test
 docker-compose build --pull nightwatch
-docker-compose up -d web hub node-chrome node-firefox
+docker-compose up -d hub node-chrome node-firefox
 timeout /t 5
 docker-compose run nightwatch
 
