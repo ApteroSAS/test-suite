@@ -27,7 +27,7 @@ services:
     logging: *LOG
     volumes:
       - ./results/nightwatch/reports/:/home/docker/app/reports
-      - ./results/nightwatch/tests_output/:/home/docker/app/tests_output
+      - ./tests_output/:/home/docker/app/tests_output
 
   node-chrome:
     image: selenium/node-chrome:3.0.1

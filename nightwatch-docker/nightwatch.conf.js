@@ -1,8 +1,7 @@
 if(!process.env.TESTS_DIRECTORY){
     process.env.TESTS_DIRECTORY="tests"
 }
-const testsDir = process.env.TESTS_DIRECTORY +"/aptero-landing-page.js" //test mode
-//const testsDir = process.env.TESTS_DIRECTORY
+const testsDir = process.env.TESTS_DIRECTORY
 console.log(testsDir);
 // Refer to the online docs for more details: https://nightwatchjs.org/gettingstarted/configuration/
 const Services = {}; loadServices();
@@ -56,6 +55,7 @@ module.exports = {
           // w3c: false,
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
           args: [
+            '--use-fake-ui-for-media-stream'
             //'--no-sandbox',
             //'--ignore-certificate-errors',
             //'--allow-insecure-localhost',
