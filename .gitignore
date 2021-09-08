@@ -1,1 +1,2 @@
 /mocha-docker/results
+/nightwatch-docker/*.log

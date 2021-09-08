@@ -21,9 +21,9 @@ export function createSingleTest(testName:string,network:string,hardware:string,
             for(let i=0;i<enduranceNumber;i++){
                 const result = await loaderoAPI.execTestAndWaitResult(testid);
                 expect(!!result).to.be.equal(true);
-                expect(loaderoAPI.getRunBodyResult(result)).to.be.equal(true);
                 addContext(this,{"title":"result","value":result});
                 addContext(this,loaderoAPI.getResultLink(result));
+                expect(loaderoAPI.getRunBodyResult(result)).to.be.equal(true);
             }
         });
 }
