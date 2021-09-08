@@ -2,8 +2,7 @@ var expect = require('chai').expect;
 
 import {createTestCombination, getDefaultCombination} from "~/loadero/TFactory";
 
-describe('loadero-simple',  () => {
+describe('loadero-default',  () => {
     let defaultCombination = getDefaultCombination();
-    defaultCombination.participantNumberList=[1];
     createTestCombination(defaultCombination);
 });
