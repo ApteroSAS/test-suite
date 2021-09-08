@@ -15,9 +15,9 @@ export const possibleVideoFeedValue = ["720p"];
 export const possibleAudioFeedValue = ["128kbps"];
 
 const DEFAULT_RUN_ID = 51382;
-console.log("PROD_RUN: " + process.env.PROD_RUN)
+console.log("PROD_RUN: " + process.env.PROD_RUN);
 export class LoaderoAPI{
-    prodRun = (!!process.env.PROD_RUN) || false;
+    prodRun = (process.env.PROD_RUN==="true") || false;
     testData=null;
 
     async loadTestsData(){
