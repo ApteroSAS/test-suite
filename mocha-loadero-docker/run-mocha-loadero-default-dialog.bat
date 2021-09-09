@@ -1,0 +1,1 @@
+call run-mocha-loadero-param.bat loadero-default.test.ts dialog %1
