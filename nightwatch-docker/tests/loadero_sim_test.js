@@ -24,9 +24,6 @@ function test(client) {
         // Open page
         .url(url)            
         // Waits for 'body' element to be visible
-        .openNewWindow(function(result) {
-            console.log(result);
-        })
         .waitForElementVisible('body', 10*60*1000)//10 min max
         .pause(test_duration/2)//wait
         .assert.visible(".rs-fps-counter");
