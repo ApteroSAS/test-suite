@@ -1,1 +1,1 @@
-call run-mocha-loadero-param.bat loadero-simple.test.ts %1
+call run-mocha-loadero-param.bat loadero-simple.test.ts %1 %2

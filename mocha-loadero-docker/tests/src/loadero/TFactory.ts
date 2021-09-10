@@ -78,8 +78,12 @@ export function combination(data:{
 }
  */
 export function getDefaultCombination(){
+    let testlist = ["CI_test_dialog"]
+    if(process.env.LOADERO_TEST){
+        testlist = ["CI_test_"+process.env.LOADERO_TEST]
+    }
     return {
-        testNameList:["CI_test_dialog"],
+        testNameList:testlist,
         networkList:["default"],
         hardwareList:["g2"],
         participantNumberList:[25],
