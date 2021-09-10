@@ -86,7 +86,7 @@ export function getDefaultCombination(){
         testNameList:testlist,
         networkList:["default"],
         hardwareList:["g2"],
-        participantNumberList:[20],
+        participantNumberList:[25],
         webcamList:["720pAV"],
         browserList:["chromeLatest"],
         locationList:["eu-central-1"],
