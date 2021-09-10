@@ -1,21 +1,20 @@
-var nightwatchConfig = require('../nightwatch.conf.js')
-
-function screenshoot(client){
-    if(client.takeScreenshot){
-        client.takeScreenshot("result-"+Math.random()+".png");
-    }else{
-        client.saveScreenshot("./tests_output/screenshots/result-"+Math.random()+".png");
-    }
-}
-
 module.exports = {
-  'Aptero Landing Test': function (browser) {
-    browser
-      .url('https://www.aptero.co/')
-      .waitForElementVisible('body')
-      .assert.titleContains('Aptero');
-      
-    screenshoot(browser);
-    browser.end();
-  },
-}
+    before: function (browser) {
+
+        //Declaring Global Timeout
+        browser.globals.waitForConditionTimeout = 7000
+    },
+
+    'Validate URL and Text in New Window': function (browser) {
+        browser
+            .url('https://meet.aptero.co/dcU3wXc/ci-test-twilio?vr_entry_type=2d_now&test=true')
+            .openNewWindow(function(result) {
+                console.log(result);
+              })
+        .waitForElementVisible('body', 10*60*1000)//10 min max
+          .pause(15*1000/2)
+        .assert.visible(".rs-fps-counter");
+
+
+    }
+    }

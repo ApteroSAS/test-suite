@@ -20,6 +20,10 @@ module.exports = {
         path: 'tests_output/screenshots',
       },
     },
+    test_workers: {
+        enabled: true,
+        workers: 'auto'
+    },
     
       
     firefox_local: {
@@ -66,7 +70,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        port: 9515,
+        port: 9516,
         server_path: (Services.chromedriver ? Services.chromedriver.path : ''),
         cli_args: [
           // --verbose
