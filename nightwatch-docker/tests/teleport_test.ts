@@ -1,11 +1,10 @@
 module.exports = {
     before: function (browser) {
-
         //Declaring Global Timeout
         browser.globals.waitForConditionTimeout = 7000
     },
 
-    'Validate URL and Text in New Window':  async function (browser) {
+    'Teleport Test':  async function (browser) {
         browser
             browser.url('https://alphahub.aptero.co/hub.html?hub_id=Asf3PJQ&vr_entry_type=2d_now&test=true')
             browser.waitForElementVisible('body', 10*60*1000)

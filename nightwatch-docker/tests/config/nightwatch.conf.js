@@ -8,6 +8,10 @@ const Services = {}; loadServices();
 
 module.exports = {
   src_folders: [`${testsDir}`],
+  "exclude" : [
+    "./config/",
+    "./examples/",
+  ],
   test_settings: {
     default: {
       launch_url: 'http://www.google.com',
@@ -59,10 +63,10 @@ module.exports = {
           // w3c: false,
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
           args: [
-            '--use-fake-ui-for-media-stream'
+            '--use-fake-ui-for-media-stream',
             //'--no-sandbox',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
+            '--ignore-certificate-errors',
+            '--allow-insecure-localhost',
             //'--headless'
           ]
         }

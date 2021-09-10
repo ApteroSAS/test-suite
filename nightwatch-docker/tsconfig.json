@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "module": "commonjs",
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "rootDir": "tests",
+	"baseUrl": "tests",
+    "inlineSourceMap": true
+  },
+  "exclude": ["node_modules", "build"]
+}
