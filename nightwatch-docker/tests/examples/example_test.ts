@@ -1,9 +1,8 @@
+import { NightwatchBrowser } from 'nightwatch';
 var nightwatchConfig = require('../nightwatch.conf.js')
 
-// EXAMPLE ONLY:
-
 module.exports = {
-  'Nightwatch.js Test': function (browser) {
+  'Nightwatch.js Test': (browser: NightwatchBrowser) => {
     console.log('Nightwatch tests started')
 
     browser

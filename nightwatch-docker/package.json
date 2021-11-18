@@ -7,12 +7,16 @@
     "test": "tests"
   },
   "dependencies": {
+    "@types/nightwatch": "^1.3.4",
+    "@types/node": "^16.9.1",
     "handlebars": "^4.7.7",
     "nightwatch": "^1.6.0",
-    "nightwatch-html-reporter": "^2.0.6"
+    "nightwatch-html-reporter": "^2.0.6",
+    "typescript": "^4.4.2"
   },
   "devDependencies": {
     "chromedriver": "^93.0.1",
+    "cross-env": "^7.0.3",
     "dockerfilelint": "^1.8.0",
     "geckodriver": "^2.0.4",
     "lint-staged": "^10.5.4",
@@ -24,8 +28,11 @@
     "format:check": "npm run pretty -- --list-different",
     "lint": "npm run lint:dockerfile && npm run format:check",
     "lint:dockerfile": "dockerfilelint Dockerfile",
-    "nightwatch": "nightwatch -e chrome_selenium,firefox_selenium",
-    "nightwatch-debug": "nightwatch -e chromeDebug_selenium,firefoxDebug_selenium",
+    "build": "tsc",
+    "chrome-local": "cross-env tsc && nightwatch -e chrome_local -c ./build/config/nightwatch.conf.js",
+    "firefox-local": "cross-env tsc && nightwatch -e firefox_local -c ./build/config/nightwatch.conf.js",
+    "nightwatch": "cross-env tsc && nightwatch -e chrome_selenium,firefox_selenium -c ./build/config/nightwatch.conf.js",
+    "nightwatch-debug": "cross-env tsc && nightwatch -e chromeDebug_selenium,firefoxDebug_selenium -c ./build/config/nightwatch.conf.js",
     "start": "bin/start",
     "start:debug": "bin/start-debug",
     "stop": "bin/stop",

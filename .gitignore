@@ -1,3 +1,4 @@
 /mocha-docker/results
 /mocha-loadero-docker/results
 /nightwatch-docker/*.log
+/nightwatch-docker/build
